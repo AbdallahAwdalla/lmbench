@@ -26,6 +26,7 @@
 char	*id = "$Id$\n";
 
 #include "bench.h"
+#include <math.h>
 
 struct _state {
 	int	N;
@@ -255,6 +256,22 @@ do_float_mul(iter_t iterations, void* cookie)
 }
 
 void
+do_float_sqrt(iter_t iterations, void* cookie)
+{
+	struct _state *pState = (struct _state*)cookie;
+	register float f = 8.0f * (float)pState->N;
+	register float g = 0.125f * (float)pState->M / 1000.0;
+
+	while (iterations-- > 0) {
+		TEN(f = sqrt(g); g =sqrt(f););
+		TEN(f = sqrt(g); g =sqrt(f););
+	}
+	use_int((int)f);
+	use_int((int)g);
+}
+
+
+void
 do_float_div(iter_t iterations, void* cookie)
 {
 	struct _state *pState = (struct _state*)cookie;
@@ -453,6 +470,10 @@ main(int ac, char **av)
 	benchmp(NULL, do_float_mul, NULL, 
 		0, 1, warmup, repetitions, &state);
 	nano("float mul", get_n() * 10 * 2 * 2);
+
+	benchmp(NULL, do_float_sqrt, NULL, 
+		0, 1, warmup, repetitions, &state);
+	nano("float sqrt", get_n() * 10 * 2 * 2);
 	
 	benchmp(NULL, do_float_div, NULL, 
 		0, 1, warmup, repetitions, &state);

@@ -1,0 +1,178 @@
+[lmbench3.0 results for Linux AAwdallah 5.15.167.4-microsoft-standard-WSL2 #1 SMP Tue Nov 5 00:21:55 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux]
+[LMBENCH_VER: lmbench-3alpha4]
+[BENCHMARK_HARDWARE: YES]
+[BENCHMARK_OS: YES]
+[ALL: 512 1k 2k 4k 8k 16k 32k 64k 128k 256k 512k 1m 2m 4m 8m 16m 32m 64m 128m 256m 512m 1024m 2048m 4096m]
+[DISKS: ]
+[DISK_DESC: ]
+[ENOUGH: 5000]
+[FAST: ]
+[FASTMEM: NO]
+[FILE: /var/tmp/XXX]
+[FSDIR: /var/tmp]
+[HALF: 512 1k 2k 4k 8k 16k 32k 64k 128k 256k 512k 1m 2m 4m 8m 16m 32m 64m 128m 256m 512m 1024m 2048m]
+[INFO: INFO.AAwdallah]
+[LINE_SIZE: 128]
+[LOOP_O: 0.00000222]
+[MB: 5451]
+[MHZ: 2993 MHz, 0.3341 nanosec clock]
+[MOTHERBOARD: ]
+[NETWORKS: ]
+[PROCESSORS: 20]
+[REMOTE: ]
+[SLOWFS: NO]
+[OS: x86_64-linux-gnu]
+[SYNC_MAX: 1]
+[LMBENCH_SCHED: DEFAULT]
+[TIMING_O: 0]
+[LMBENCH VERSION: lmbench-3alpha4]
+[USER: abdallah]
+[HOSTNAME: AAwdallah]
+[NODENAME: AAwdallah]
+[SYSNAME: Linux]
+[PROCESSOR: x86_64]
+[MACHINE: x86_64]
+[RELEASE: 5.15.167.4-microsoft-standard-WSL2]
+[VERSION: #1 SMP Tue Nov 5 00:21:55 UTC 2024]
+[Mon Nov 25 23:34:24 EET 2024]
+[ 23:34:24 up 2:07, 1 user, load average: 0.13, 0.13, 0.05]
+./lmbench: 104: netstat: not found
+[mount: none on /usr/lib/modules/5.15.167.4-microsoft-standard-WSL2 type overlay (rw,nosuid,nodev,noatime,lowerdir=/modules,upperdir=/lib/modules/5.15.167.4-microsoft-standard-WSL2/rw/upper,workdir=/lib/modules/5.15.167.4-microsoft-standard-WSL2/rw/work)]
+[mount: none on /mnt/wsl type tmpfs (rw,relatime)]
+[mount: drivers on /usr/lib/wsl/drivers type 9p (ro,nosuid,nodev,noatime,dirsync,aname=drivers;fmask=222;dmask=222,mmap,access=client,msize=65536,trans=fd,rfd=7,wfd=7)]
+[mount: /dev/sdc on / type ext4 (rw,relatime,discard,errors=remount-ro,data=ordered)]
+[mount: none on /mnt/wslg type tmpfs (rw,relatime)]
+[mount: /dev/sdc on /mnt/wslg/distro type ext4 (ro,relatime,discard,errors=remount-ro,data=ordered)]
+[mount: none on /usr/lib/wsl/lib type overlay (rw,nosuid,nodev,noatime,lowerdir=/gpu_lib_packaged:/gpu_lib_inbox,upperdir=/gpu_lib/rw/upper,workdir=/gpu_lib/rw/work)]
+[mount: rootfs on /init type rootfs (ro,size=3984228k,nr_inodes=996057)]
+[mount: none on /dev type devtmpfs (rw,nosuid,relatime,size=3984228k,nr_inodes=996057,mode=755)]
+[mount: sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,noatime)]
+[mount: proc on /proc type proc (rw,nosuid,nodev,noexec,noatime)]
+[mount: devpts on /dev/pts type devpts (rw,nosuid,noexec,noatime,gid=5,mode=620,ptmxmode=000)]
+[mount: none on /run type tmpfs (rw,nosuid,nodev,mode=755)]
+[mount: none on /run/lock type tmpfs (rw,nosuid,nodev,noexec,noatime)]
+[mount: none on /run/shm type tmpfs (rw,nosuid,nodev,noatime)]
+[mount: none on /dev/shm type tmpfs (rw,nosuid,nodev,noatime)]
+[mount: none on /run/user type tmpfs (rw,nosuid,nodev,noexec,noatime,mode=755)]
+[mount: binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,relatime)]
+[mount: tmpfs on /sys/fs/cgroup type tmpfs (ro,nosuid,nodev,noexec,size=4096k,nr_inodes=1024,mode=755)]
+[mount: cgroup2 on /sys/fs/cgroup/unified type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate)]
+[mount: cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset)]
+[mount: cgroup on /sys/fs/cgroup/cpu type cgroup (rw,nosuid,nodev,noexec,relatime,cpu)]
+[mount: cgroup on /sys/fs/cgroup/cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,cpuacct)]
+[mount: cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)]
+[mount: cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,memory)]
+[mount: cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,devices)]
+[mount: cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)]
+[mount: cgroup on /sys/fs/cgroup/net_cls type cgroup (rw,nosuid,nodev,noexec,relatime,net_cls)]
+[mount: cgroup on /sys/fs/cgroup/perf_event type cgroup (rw,nosuid,nodev,noexec,relatime,perf_event)]
+[mount: cgroup on /sys/fs/cgroup/net_prio type cgroup (rw,nosuid,nodev,noexec,relatime,net_prio)]
+[mount: cgroup on /sys/fs/cgroup/hugetlb type cgroup (rw,nosuid,nodev,noexec,relatime,hugetlb)]
+[mount: cgroup on /sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,pids)]
+[mount: cgroup on /sys/fs/cgroup/rdma type cgroup (rw,nosuid,nodev,noexec,relatime,rdma)]
+[mount: cgroup on /sys/fs/cgroup/misc type cgroup (rw,nosuid,nodev,noexec,relatime,misc)]
+[mount: none on /mnt/wslg/versions.txt type overlay (rw,relatime,lowerdir=/systemvhd,upperdir=/system/rw/upper,workdir=/system/rw/work)]
+[mount: none on /mnt/wslg/doc type overlay (rw,relatime,lowerdir=/systemvhd,upperdir=/system/rw/upper,workdir=/system/rw/work)]
+[mount: none on /tmp/.X11-unix type tmpfs (ro,relatime)]
+[mount: C: on /mnt/c type 9p (rw,noatime,dirsync,aname=drvfs;path=C:;uid=1000;gid=1000;symlinkroot=/mnt/,mmap,access=client,msize=65536,trans=fd,rfd=5,wfd=5)]
+[mount: none on /run/user type tmpfs (rw,relatime)]
+[mount: cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,xattr,name=systemd)]
+[mount: hugetlbfs on /dev/hugepages type hugetlbfs (rw,nosuid,nodev,relatime,pagesize=2M)]
+[mount: mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)]
+[mount: debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime)]
+[mount: tracefs on /sys/kernel/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)]
+[mount: fusectl on /sys/fs/fuse/connections type fusectl (rw,nosuid,nodev,noexec,relatime)]
+[mount: tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,size=797528k,nr_inodes=199382,mode=700,uid=1000,gid=1000)]
+[mount: tmpfs on /mnt/wslg/run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,size=797528k,nr_inodes=199382,mode=700,uid=1000,gid=1000)]
+Simple syscall: 0.2466 microseconds
+Simple read: 0.1668 microseconds
+Simple write: 0.1905 microseconds
+Simple stat: 0.4415 microseconds
+Simple fstat: 0.1844 microseconds
+Simple open/close: 1.6960 microseconds
+Select on 10 fd's: 0.2904 microseconds
+Select on 100 fd's: 0.8455 microseconds
+Select on 250 fd's: 2.5439 microseconds
+Select on 500 fd's: 4.3809 microseconds
+Select on 10 tcp fd's: 0.3108 microseconds
+Select on 100 tcp fd's: 1.7805 microseconds
+Select on 250 tcp fd's: 4.6870 microseconds
+Select on 500 tcp fd's: 7.8826 microseconds
+Signal handler installation: 0.1691 microseconds
+Signal handler overhead: 0.9567 microseconds
+Protection fault: 0.4521 microseconds
+Pipe latency: 36.6568 microseconds
+AF_UNIX sock stream latency: 35.9404 microseconds
+Process fork+exit: 155.7879 microseconds
+Process fork+execve: 467.2308 microseconds
+Process fork+/bin/sh -c: 1415.0000 microseconds
+integer bit: 0.24 nanoseconds
+integer add: 0.01 nanoseconds
+integer mul: 1.03 nanoseconds
+integer div: 3.66 nanoseconds
+integer mod: 5.65 nanoseconds
+int64 bit: 0.25 nanoseconds
+int64 add: 0.01 nanoseconds
+int64 mul: 1.02 nanoseconds
+int64 div: 5.00 nanoseconds
+int64 mod: 6.39 nanoseconds
+float add: 0.67 nanoseconds
+float mul: 1.33 nanoseconds
+float div: 3.69 nanoseconds
+double add: 0.66 nanoseconds
+double mul: 1.33 nanoseconds
+double div: 4.72 nanoseconds
+float bogomflops: 1.01 nanoseconds
+double bogomflops: 1.33 nanoseconds
+integer bit parallelism: 2.61
+integer add parallelism: 2.05
+integer mul parallelism: 3.10
+integer div parallelism: 1.84
+integer mod parallelism: 2.84
+int64 bit parallelism: 2.72
+int64 add parallelism: 2.65
+int64 mul parallelism: 3.11
+int64 div parallelism: 1.50
+int64 mod parallelism: 1.90
+float add parallelism: 4.00
+float mul parallelism: 7.90
+float div parallelism: 3.68
+double add parallelism: 3.99
+double mul parallelism: 7.89
+double div parallelism: 3.50
+File /var/tmp/XXX write bandwidth: 1110342 KB/sec
+Pagefaults on /var/tmp/XXX: 0.0515 microseconds
+
+"mappings
+0.524288 8.198
+1.048576 12
+2.097152 20
+4.194304 40
+8.388608 56
+16.777216 107
+33.554432 209
+67.108864 406
+134.217728 827
+268.435456 1676
+536.870912 3342
+1073.741824 6620
+2147.483648 13322
+4294.967296 28326
+
+"File system latency
+0k	569	101971	118528
+1k	510	90763	109378
+4k	453	89845	106282
+10k	378	71604	97187
+
+unable to register (XACT_PROG, XACT_VERS, udp).
+No such file or directory
+No such file or directory
+No such file or directory
+No such file or directory
+UDP latency using localhost: 41.2537 microseconds
+TCP latency using localhost: 41.8646 microseconds
+control nbytes: Bad file descriptor
+control nbytes: Bad file descriptor
+localhost: RPC: Timed out
+localhost: RPC: Remote system error - Connection refused
