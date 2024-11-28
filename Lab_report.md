@@ -48,70 +48,64 @@ The lmbench results:
 
 Here's the lmbench summary in Markdown format:
 
----
-
-# LMBENCH 3.0 SUMMARY
-------------------------------------
-(Alpha software, do not distribute)
+# LMbench 3.0 Summary
+**(Alpha software, do not distribute)**
 
 ## Basic System Parameters
-| Host      | OS           | Description       | Mhz | tlb pages | cache line bytes | mem par | scal load |
-|-----------|--------------|-------------------|-----|-----------|------------------|---------|-----------|
-| AAwdallah | Linux 5.15.16 | x86_64-linux-gnu | 2993 |           | 128              |         | 1         |
+| Host      | OS Description       | Mhz | tlb pages | cache line bytes | mem par | scal load |
+|-----------|----------------------|-----|-----------|------------------|---------|-----------|
+| AAwdallah | Linux 5.15.16 x86_64 | 2993|           | 128              |         | 1         |
 
 ## Processor, Processes - Times in Microseconds (Smaller is Better)
-| Host      | OS           | Mhz | null call | null I/O | stat | open | close | slct TCP | sig inst | sig hndl | fork | exec | sh proc |
-|-----------|--------------|-----|-----------|----------|------|------|-------|----------|----------|----------|------|------|---------|
-| AAwdallah | Linux 5.15.16 | 2993 | 0.25      | 0.18     | 0.44 | 1.70 | 1.78  | 0.17     | 0.96     | 155.0    | 467.0 | 1415.0 |
-| AAwdallah | Linux 5.15.16 | 3015 | 0.12      | 0.15     | 0.44 | 1.04 | 2.27  | 0.19     | 0.87     | 153.0    | 395.0 | 933.0  |
-| AAwdallah | Linux 5.15.16 | 3088 | 0.18      | 0.14     | 0.36 | 1.02 | 1.50  | 0.19     | 0.89     | 155.0    | 399.0 | 851.0  |
-| AAwdallah | Linux 5.15.16 | 3088 | 0.11      | 0.13     | 0.36 | 0.90 | 1.50  | 0.28     | 0.89     | 168.0    | 401.0 | 776.0  |
-| AAwdallah | Linux 5.15.16 | 3088 | 0.11      | 0.15     | 0.36 | 0.85 | 1.38  | 0.16     | 0.82     | 160.0    | 382.0 | 839.0  |
+| Host      | OS           | Mhz | null call | null I/O | stat | open | slct | clos | TCP inst | sig hndl | fork | exec | sh proc |
+|-----------|---------------|-----|-----------|----------|------|------|------|------|----------|----------|------|------|---------|
+| AAwdallah | Linux 5.15.16 | 2993| 0.25      | 0.18     | 0.44 | 1.70 | 1.78 | 0.17 | 0.96     | 155.0    | 467.0| 1415.0|
+| AAwdallah | Linux 5.15.16 | 3015| 0.12      | 0.15     | 0.44 | 1.04 | 2.27 | 0.19 | 0.87     | 153.0    | 395.0| 933.0 |
+| AAwdallah | Linux 5.15.16 | 3088| 0.18      | 0.14     | 0.36 | 1.02 | 1.50 | 0.19 | 0.89     | 155.0    | 399.0| 851.0 |
+| AAwdallah | Linux 5.15.16 | 3088| 0.11      | 0.13     | 0.36 | 0.90 | 1.50 | 0.28 | 0.89     | 168.0    | 401.0| 776.0 |
+| AAwdallah | Linux 5.15.16 | 3088| 0.11      | 0.15     | 0.36 | 0.85 | 1.38 | 0.16 | 0.82     | 160.0    | 382.0| 839.0 |
+| AAwdallah | Linux 5.15.16 | 3088| 0.20      | 0.17     | 0.44 | 1.70 | 1.95 | 0.23 | 1.06     | 194.0    | 589.0| 1325.0|
 
 ## Basic Integer Operations - Times in Nanoseconds (Smaller is Better)
 | Host      | OS           | intgr bit | intgr add | intgr mul | intgr div | intgr mod |
-|-----------|--------------|-----------|-----------|-----------|-----------|-----------|
+|-----------|---------------|-----------|-----------|-----------|-----------|-----------|
 | AAwdallah | Linux 5.15.16 | 0.2400    | 0.0100    | 1.0300    | 3.6600    | 5.6500    |
 | AAwdallah | Linux 5.15.16 | 0.2400    | 0.0100    | 1.0500    | 3.8700    | 5.6400    |
 | AAwdallah | Linux 5.15.16 | 0.2500    | 0.0100    | 1.0600    | 3.7600    | 5.8800    |
 | AAwdallah | Linux 5.15.16 | 0.2400    | 0.0100    | 0.9800    | 3.4800    | 5.4000    |
 | AAwdallah | Linux 5.15.16 | 0.2600    | 0.0100    | 1.0700    | 3.7800    | 5.8400    |
+| AAwdallah | Linux 5.15.16 | 0.3600    | 0.0100    | 1.2600    | 4.5000    | 7.3100    |
 
 ## Basic Float Operations - Times in Nanoseconds (Smaller is Better)
-| Host      | OS           | float add | float mul | float div | float bogo |
-|-----------|--------------|-----------|-----------|-----------|------------|
-| AAwdallah | Linux 5.15.16 | 0.6700    | 1.3300    | 3.6900    | 1.0100     |
-| AAwdallah | Linux 5.15.16 | 0.6700    | 1.3300    | 3.6800    | 1.0000     |
-| AAwdallah | Linux 5.15.16 | 0.6900    | 1.4100    | 3.7800    | 1.0200     |
-| AAwdallah | Linux 5.15.16 | 0.6300    | 1.2900    | 3.4900    | 0.9500     |
-| AAwdallah | Linux 5.15.16 | 0.6800    | 1.5000    | 3.9900    | 1.0500     |
+| Host      | OS           | float add | float mul | float sqrt | float div | float bogo |
+|-----------|---------------|-----------|-----------|------------|-----------|------------|
+| AAwdallah | Linux 5.15.16 | 0.6700    | 1.3300    |            | 3.6900    | 1.0100     |
+| AAwdallah | Linux 5.15.16 | 0.6700    | 1.3300    |            | 3.6800    | 1.0000     |
+| AAwdallah | Linux 5.15.16 | 0.6900    | 1.4100    |            | 3.7800    | 1.0200     |
+| AAwdallah | Linux 5.15.16 | 0.6300    | 1.2900    |            | 3.4900    | 0.9500     |
+| AAwdallah | Linux 5.15.16 | 0.6800    | 1.5000    |            | 3.9900    | 1.0500     |
+| AAwdallah | Linux 5.15.16 | 0.8300    | 1.6600    | 5.5700     | 4.5700    | 1.2200     |
 
 ## Basic Double Operations - Times in Nanoseconds (Smaller is Better)
 | Host      | OS           | double add | double mul | double div | double bogo |
-|-----------|--------------|------------|------------|------------|-------------|
+|-----------|---------------|------------|------------|------------|-------------|
 | AAwdallah | Linux 5.15.16 | 0.6600     | 1.3300     | 4.7200     | 1.3300      |
 | AAwdallah | Linux 5.15.16 | 0.6700     | 1.3300     | 4.6900     | 1.3300      |
 | AAwdallah | Linux 5.15.16 | 0.7100     | 1.3800     | 4.8200     | 1.3800      |
 | AAwdallah | Linux 5.15.16 | 0.6300     | 1.2800     | 4.4300     | 1.2600      |
 | AAwdallah | Linux 5.15.16 | 0.6900     | 1.3700     | 4.8200     | 1.3700      |
+| AAwdallah | Linux 5.15.16 | 0.9500     | 1.6300     | 5.7500     | 1.6600      |
 
 ## Context Switching - Times in Microseconds (Smaller is Better)
 | Host      | OS           | 2p/0K ctxsw | 2p/16K ctxsw | 2p/64K ctxsw | 8p/16K ctxsw | 8p/64K ctxsw | 16p/16K ctxsw | 16p/64K ctxsw |
-|-----------|--------------|-------------|--------------|--------------|--------------|--------------|---------------|---------------|
+|-----------|---------------|-------------|--------------|--------------|--------------|--------------|---------------|---------------|
 | AAwdallah | Linux 5.15.16 | 17.3        | 19.3         | 17.3         | 19.7         | 19.1         | 20.1          | 21.1          |
 | AAwdallah | Linux 5.15.16 | 16.8        | 18.1         | 19.5         | 19.3         | 24.0         | 22.8          | 21.9          |
+| AAwdallah | Linux 5.15.16 | 53.2        | 23.5         | 27.4         | 31.2         | 28.6         | 30.5          | 23.2          |
 
 ## Local Communication Latencies in Microseconds (Smaller is Better)
 | Host      | OS           | 2p/0K ctxsw | Pipe | AF UNIX | UDP  | RPC/UDP | TCP  | RPC/TCP | TCP conn |
-|-----------|--------------|-------------|------|---------|------|---------|------|---------|----------|
+|-----------|---------------|-------------|------|---------|------|---------|------|---------|----------|
 | AAwdallah | Linux 5.15.16 |             | 36.7 | 35.9    | 41.3 |         | 41.9 |         |          |
 | AAwdallah | Linux 5.15.16 | 17.3        | 36.5 | 35.2    | 42.9 |         | 41.3 |         | 30.0     |
-| AAwdallah | Linux 5.15.16 |             | 35.7 | 34.7    | 41.8 |         | 42.3 |         | 14.0     |
-| AAwdallah | Linux 5.15.16 |             | 36.8 | 33.8    | 39.8 |         | 40.7 |         | 11.0     |
-| AAwdallah | Linux 5.15.16 | 16.8        | 36.4 | 35.6    | 40.6 |         | 41.0 |         | 11.0     |
-
-## File & VM System Latencies in Microseconds (Smaller is Better)
-| Host      | OS           | 0K File Create | 0K File Delete | 10K File Create | 10K File Delete | Mmap Latency | Prot Fault | Page Fault | 100fd selct |
-|-----------|--------------|----------------|----------------|-----------------|-----------------|--------------|------------|------------|-------------|
-| AAwdallah | Linux 5.15.16 | 9.8067         | 8.4368         | 14.0            | 10.3            | 28.3K        | 0.452      | 0.05150    | 0.846       |
-|
+| AAwdallah | Linux 5.15.16 |             | 35.7 | 34.7    | 41.8 |
