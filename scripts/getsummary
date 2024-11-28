@@ -105,6 +105,10 @@ foreach $file (@ARGV) {
 			@_ = split;
 			push(@float_mul, $_[2]);
 		}
+		if (/^float sqrt:/) {
+			@_ = split;
+			push(@float_sqrt, $_[2]);
+		}
 		if (/^float div:/) {
 			@_ = split;
 			push(@float_div, $_[2]);
@@ -404,7 +408,7 @@ foreach $file (@ARGV) {
 		'bw_mem_rdsum', 'bw_mem_wr', 'bw_mmap', 'bw_pipe',
 		'bw_reread', 'bw_tcp_local', 'bw_tcp_remote', 'bw_unix', 
 		'double_add', 'double_bogomflops', 'double_div', 'double_mul',
-		'float_add', 'float_bogomflops', 'float_div', 'float_mul',
+		'float_add', 'float_bogomflops', 'float_div', 'float_mul','float_sqrt',
 		'fs_create_0k', 'fs_create_1k', 'fs_create_4k',
 		'fs_create_10k', 'fs_delete_0k', 'fs_delete_1k',
 		'fs_delete_4k', 'fs_delete_10k', 'integer_add',
@@ -625,7 +629,7 @@ sub print_float
 	local($i);
 	local($t);
 	
-	if (&resultsq(0, $#uname, ( 'float_add', 'float_mul', 'float_div',
+	if (&resultsq(0, $#uname, ( 'float_add', 'float_mul','float_sqrt', 'float_div',
 					'float_bogomflops' )) <= 0) { 
 		return; 
 	}
@@ -633,21 +637,22 @@ sub print_float
 
 Basic float operations - times in nanoseconds - smaller is better
 -----------------------------------------------------------------
-Host                 OS  float  float  float  float
-                         add    mul    div    bogo
---------- ------------- ------ ------ ------ ------ 
+Host                 OS  float  float  float  float  float
+                         add    mul    sqrt   div    bogo
+--------- ------------- ------ ------ ------ ------ ------ 
 EOF
 
 	for ($i = 0; $i <= $#uname; $i++) {
-		if (&resultsq($i, $i, ( 'float_add', 'float_mul', 
+		if (&resultsq($i, $i, ( 'float_add', 'float_mul', 'float_sqrt',
 					'float_div', 
 					'float_bogomflops' )) <= 0) { 
 			next; 
 		}
 	        printf "%-9.9s %13.13s ", $host[$i], &getos($uname[$i]);
-		printf "%6.6s %6.6s %6.6s %6.6s\n",
+		printf "%6.6s %6.6s %6.6s %6.6s %6.6s\n",
 			&scale_num($float_add[$i], 6, $load[$i]),
 			&scale_num($float_mul[$i], 6, $load[$i]),
+			&scale_num($float_sqrt[$i], 6, $load[$i]),
 			&scale_num($float_div[$i], 6, $load[$i]),
 			&scale_num($float_bogomflops[$i], 6, $load[$i]);
 	}

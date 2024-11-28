@@ -11,6 +11,7 @@
 char	*id = "$Id$\n";
 
 #include "bench.h"
+#include <math.h>
 
 struct _state {
 	int	N;
@@ -299,6 +300,19 @@ PARALLEL_BENCHMARKS(float_add)
 #define PREAMBLE(N)
 #define SAVE(N)		use_int((int)r##N); use_int((int)s##N);
 PARALLEL_BENCHMARKS(float_mul)
+#undef	BODY
+#undef	DECLARE
+#undef	INIT
+#undef	PREAMBLE
+#undef	SAVE
+
+#define BODY(N)		r##N = sqrt(s##N); s##N = sqrt(r##N);
+#define DECLARE(N)	register float r##N, s##N;
+#define INIT(N)		r##N = 8.0f * (float)state->double_data[N]; \
+			s##N = 0.125 * (float)state->M * state->double_data[N] / 1000.0;
+#define PREAMBLE(N)
+#define SAVE(N)		use_int((int)r##N); use_int((int)s##N);
+PARALLEL_BENCHMARKS(float_sqrt)
 #undef	BODY
 #undef	DECLARE
 #undef	INIT
